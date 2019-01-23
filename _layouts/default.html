@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8">
+<title>{{ page.title }}</title>
+<link href="https://www.noreal.pro/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="https://www.noreal.pro/atom.html" />
+{% if page.description %}
+<meta name="description" content="{{ page.description }}" />
+{% endif %}
+{% if page.keywords %}
+<meta name="keywords" content="{{ page.keywords }}" />
+{% endif %}
+<link rel="stylesheet" href="https://www.noreal.pro/static/css/base-common.css" />
+{% if page.styles %}
+{% for style in page.styles %}
+<link rel="stylesheet" href="https://www.noreal.pro/static/css/{{ style }}.css" />
+{% endfor %}
+{% endif %}
+<!--[if lt IE 9]>
+<script src="https://www.noreal.pro/static/js/html5.js"></script>
+<![endif]-->
+<script type='text/javascript' src='https://www.noreal.pro/static/js/jquery-migrate.min.js'></script>
+
+</head>
+ 
+<body>
+<header>
+  <nav class="fn-clear">
+    <a href="https://www.noreal.pro" id="logo" class="fn-left">托斯卡纳</a>
+    <a href="/#anchor-article" id="link-article" class="fn-left">Article</a>
+     <a href="/#anchor-project" id="link-project" class="fn-left">Project</a>
+ <a href="/#anchor-aboutme" id="link-aboutme" class="fn-left">About</a>
+
+ 
+
+	<a href="/links.html"  class="fn-right">Links</a>
+ <!--<a href="/tags.html"  class="fn-right">Tags</a>
+
+    <a href="/categories.html" class="fn-right">Categories</a>-->
+ <a href="/archive.html"  class="fn-right">Archive</a>
+  <a href="/lijiang.html"  class="fn-right">丽江</a>
+<a href="/tuscany.html"  class="fn-right">托斯卡纳</a>
+ 
+	
+
+  </nav>
+</header>
+
+<div id="main">
+{{ content }}
+</div>
+
+<footer>
+  <p>© Copyright 2003 - 2014 托斯卡纳;Powered by <a href="https://github.com/mojombo/jekyll/wiki" target="_blank">Jekyll</a> & <a target="_blank" href="http://www.github.com">Github.com</a></p>
+</footer>
+
+
+
+</body> 
+</html>

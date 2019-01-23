@@ -1,0 +1,156 @@
+---
+layout: default
+title: 托斯卡纳
+description: 意大利的静逸空间，文艺复兴的最初摇篮...
+keywords: 托斯卡纳, 丽江, Linux, 安防
+---
+<style>
+/*
+  @名称: index
+	@功能: 首页样式
+*/
+h2 {
+  font-size:18px;
+  font-weight:bold;
+  color:black;
+}
+#article,
+#article2,
+#project,
+#aboutme {
+  margin:30px auto 0;
+}
+#article ul,
+#article2 ul,
+#project ul,
+#aboutme p {
+  margin:0 2em;
+}
+#article time {
+  color:#999;
+}
+#article ul {
+  line-height:1.8;
+}
+#article2 time {
+  color:#999;
+}
+#article2 ul {
+  line-height:1.8;
+}
+#project li {
+  margin:8px 8px 0 0;
+}
+#project a {
+  display:inline-block;
+  border:1px solid #ccc;
+  padding:2px;
+}
+#project a:hover {
+  border:2px solid #A10000;
+  padding:1px;
+}
+#project img {
+  display:block;
+  width:145px;
+  height:100px;
+}
+#aboutme {
+  line-height:2.2;
+}
+#aboutme span {
+  font-weight:bold;
+  margin-right:10px;
+}
+#aboutme a {
+  margin-right:15px;
+}
+</style>
+
+<section id="article">
+  <h2>Article</h2>
+  <ul>
+    {% for post in site.posts limit:15 %}
+      <li><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+	 {% endfor %}
+	<li><a href="archive.html">阅读全部文章...</a></li>
+  </ul>
+</section>
+
+
+<section id="project">
+  <h2>Project</h2>
+  <ul class="fn-clear">
+    
+      <li class="fn-left">
+      <a href="http://www.noreal.pro/" target="_blank" title="托斯卡纳"><img src="https://www.noreal.pro/static/img/3.jpg" alt="托斯卡纳" /></a>
+    </li>
+    <li class="fn-left">
+      <a href="/#anchor-aboutme" id="link-aboutme" title="关于我"><img src="https://www.noreal.pro/static/img/about.jpg" alt="关于我" /></a>
+    </li>
+    <li class="fn-left">
+      <a href="http://www.anfang.pro/"  target="_blank" title="安防专业人士聚居地"><img src="https://www.noreal.pro/static/img/2.jpg" alt="安防工程师" /></a>
+    </li>
+
+  <li class="fn-left">
+      <a href="http://www.noreal.pro/love"  target="_blank" title="爱情故事"><img src="https://www.noreal.pro/static/img/4.jpg" alt="爱情故事" /></a>
+    </li>
+
+      </ul>
+</section>
+
+<section id="aboutme">
+  <h2>About me</h2>
+  <p>十年安防行业从业工程师</p>
+   <p>入行十年，见证了国内安防行业的迅猛发展，十年间国内企业全面超越霍尼韦尔、博世、SONY、松下、三星等企业。</p>
+   <p>如今，放眼全球，中国安防企业都是降维攻击，中国第几就是世界第几！</p>
+  
+    </br>
+   <p>文字总是唯美的，因为要给别人看的缘故，下笔（或者说是敲键盘）的时候总是会有意无意的放大或者是缩小某些参数和细节。我在尽我的努力，试图在我可以接受 的范围内尽可能详细的描述我内心的幸福与痛苦。然而，请原谅我由生而来的自尊，自恋，以及自卑，在这里你只能够看到我敢于展示给外人的那一面。如果你希望 进一步的了解我，那么只能够祈求上帝让我变得更加的勇敢和自信。</p>
+</br>
+<p>我将所有的访客视同我的朋友，希望你在这里能够感受到来自一位朋友的温馨，自由和自在。如果看了我的文章以后你有要说话的愿望或者是冲动，请不要过分珍惜的你的键盘或者是我的空间 －－ 因为，你是我的朋友。</p>
+  </br> 
+ 
+ 
+  <p><span>联系我:</span>微博:@ituscany  QQ:124924 </p>
+</section>
+
+
+
+
+
+
+<script>
+function moveSection(hash) {
+  var body, elem, value;
+
+  if (!hash) return;
+  
+  hash = hash.match(/#[^#]*/g);
+
+  for (var i = 0, len = hash.length; i < len; i++) {
+    value = hash[i];
+
+    if (value.indexOf('#anchor-') > -1) {
+      elem = document.getElementById(value.replace(/#anchor-/, ''));
+      break;
+    }
+  }
+
+  body = document.getElementById('main');
+  body.insertBefore(elem, body.firstElementChild || body.firstChild); 
+}
+
+moveSection(location.hash);
+
+if (location.pathname === '/') {
+  document.getElementById('link-article').onclick = goTo;
+  document.getElementById('link-project').onclick = goTo;
+  document.getElementById('link-aboutme').onclick = goTo;
+}
+
+function goTo(e) {
+  moveSection(this.href);
+  return false;
+}
+</script>

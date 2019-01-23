@@ -1,0 +1,25 @@
+---
+layout: nil
+title: 托斯卡纳
+description: 意大利的静逸空间，文艺复兴的最初摇篮...
+keywords: 托斯卡纳, 丽江, Linux, 安防
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>托斯卡纳</title>
+<link href="http://www.noreal.pro/atom.xml" rel="self"/>
+<link href="http://www.noreal.pro/"/>
+<id>http://www.noreal.pro/</id>
+<author>
+   <name>peter</name>
+   <email>jinmingkun@gmail.com</email>
+</author>
+  {% for post in site.posts  %}
+      <entry>
+	  <title>{{ post.title }}</title>
+      <updated>{{  post.date | date:'%Y-%m-%d' }}</updated> 
+	  <link href="{{ post.url }}"/>
+	  <id>{{ post.url }}</id>
+	  </entry>
+  {% endfor %}
+</feed>

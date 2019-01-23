@@ -1,0 +1,6 @@
+---
+layout: post
+category : 东拉西扯
+tags : [旷视科技 , AI ]
+title: 旷视科技完成C轮4.6亿美元融资
+---

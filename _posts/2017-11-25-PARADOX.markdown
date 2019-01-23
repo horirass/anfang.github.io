@@ -1,0 +1,14 @@
+---
+layout: post
+category : 东拉西扯
+tags : [PARADOX ,枫叶 ,ORVIBO ,欧瑞博 ,生态  ]
+title: PARADOX枫叶加入ORVIBO欧瑞博系统生态
+---
+
+1月20日，ORVIBO欧瑞博和加拿大PARADOX枫叶对外宣布合作，ORVIBO欧瑞博开放其独树一帜的基础电器智能化场景应用生态(Work With ORVIBO)，将PARADOX枫叶报警产品接入智能家居系统，PARADOX枫叶借力ORVIBO欧瑞博全渠道体系走向多场景应用。
+
+枫叶(PARADOX)报警器通过ORVIBO欧瑞博传感器接入盒、智能网关接入ORVIBO欧瑞博智能家居系统(智家365APP)，即采用有线技术的枫叶报警探测器开关量信号，被采用 ZigBee无线技术的ORVIBO欧瑞博传感器接入盒接入到全宅智能家居系统。
+
+
+
+双方联袂出手即意味着——打通无线和有线、覆盖室内和室外、包含局部和全局的全场景智能安防解决方案新鲜出炉。
